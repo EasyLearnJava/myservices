@@ -20,6 +20,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>7.6.0.v20120127</version>
+		</dependency>
+
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
@@ -34,33 +40,22 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>com.heroku.sdk</groupId>
-					<artifactId>heroku-maven-plugin</artifactId>
-					<version>1.1.1</version>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>copy</goal>
-							</goals>
-							<configuration>
-								<artifactItems>
-									<artifactItem>
-										<groupId>com.github.jsimone</groupId>
-										<artifactId>webapp-runner</artifactId>
-										<version>8.0.30.2</version>
-										<destFileName>webapp-runner.jar</destFileName>
-									</artifactItem>
-								</artifactItems>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 		<finalName>myservices</finalName>
 	</build>
 </project>
