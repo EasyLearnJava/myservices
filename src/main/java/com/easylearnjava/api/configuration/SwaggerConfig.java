@@ -25,7 +25,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        ApiInfo apiInfo = new ApiInfo("My REST API", "Some custom description of API.", "API TOS", "Terms of service", "myeaddress@company.com", "License of API", "API license URL");
+        ApiInfo apiInfo = new ApiInfo("EasyLearnJava REST API's", "Creating REST based services using Spring 4", "API TOS", "Terms of service", "easylearnjava4u@gmail.com", "License of API", "API license URL");
         return apiInfo;
     }
 }
