@@ -49,3 +49,7 @@ export class AppContext{
 <h1> This is {{var1}} and now the hero id is {{myhero.id}} and name is {{myhero.name}}
 ```
 
+6) Lets look at two way data binding example now. To achieve two way data binding make sure that we import the FormsModule in the AppModule file
+```
+<input [(ngModel)]="hero.name" placeholder="name">
+```
