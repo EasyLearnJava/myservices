@@ -1,9 +1,11 @@
 # myservices
 Test Proj
 
+<b>NOTE: All the below notes is from Angular 2 documentation </b>
+
 Angular JS 2 Notes:
 
-1) Every Angular application has at least one module: the root module, named AppModule here. This is the entry point to your application.
+1) Every Angular application has at least one module: the root module, named AppModule here. This is the entry point to your application. Declare here which components, directives and pipes belong to the module. Make some of those classes public so that other component templates can use them. Import other modules with the components, directives and pipes needed by the components in this module. Provide services at the application level that any application component can use.
 ```
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -53,3 +55,31 @@ export class AppContext{
 ```
 <input [(ngModel)]="hero.name" placeholder="name">
 ```
+
+
+Angular terminology:
+1) Dynamic bootstrapping with the Just-in-time (JiT) compiler
+```
+// The browser platform with a compiler
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+// The app module
+import { AppModule } from './app.module';
+
+// Compile and launch the module
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
+
+2) Static bootstrapping with the Ahead-Of-time (AoT) compiler
+```
+// The browser platform without a compiler
+import { platformBrowser } from '@angular/platform-browser';
+
+// The app module factory produced by the static offline compiler
+import { AppModuleNgFactory } from './app.module.ngfactory';
+
+// Launch with the app module factory.
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+```
+
+
