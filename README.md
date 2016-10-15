@@ -1,5 +1,5 @@
 # myservices
-Test Proj
+Test Proj.
 
 <b>NOTE: All the below notes is from Angular 2 documentation </b>
 
