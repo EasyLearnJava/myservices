@@ -10,7 +10,7 @@
 <link
 	href="//fonts.googleapis.com/css?family=Nunito:400,300,700|Varela+Round"
 	rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="css/home.css">
 
 </head>
 
