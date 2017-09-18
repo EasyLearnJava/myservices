@@ -14,8 +14,7 @@ public class HelloWorldController {
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public Creator welcome() {		
-		//return new Creator();
-		return null;
+		return new Creator();
 	}
 	
 	@RequestMapping(value="/hello", method = RequestMethod.GET)
